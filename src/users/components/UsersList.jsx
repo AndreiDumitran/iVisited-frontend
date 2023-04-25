@@ -1,5 +1,5 @@
-import './usersList.css';
-import UsersItemComponent from './usersItemComponent';
+import './UsersList.css';
+import UsersItemComponent from './UsersItem';
 import Card from '../../shared/components/UIElements/Card';
 
 const UsersListComponent = (prop) => {

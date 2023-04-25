@@ -5,8 +5,8 @@ import {
 	Redirect,
 } from 'react-router-dom';
 import './App.css';
-import User from './users/pages/usersPage';
-import NewPlace from './places/pages/newPlacePage';
+import User from './users/pages/Users';
+import NewPlace from './places/pages/NewPlace';
 import MainNavigation from './shared/components/Navigation/components/MainNavigation';
 
 const App = () => {
