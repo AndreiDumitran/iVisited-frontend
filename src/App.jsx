@@ -7,11 +7,13 @@ import {
 import './App.css';
 import User from './users/pages/usersPage';
 import NewPlace from './places/pages/newPlacePage';
+import MainNavigation from './shared/components/Navigation/components/MainNavigation';
 
 const App = () => {
 	return (
-		<>
-			<Router>
+		<Router>
+			<MainNavigation />
+			<main>
 				<Switch>
 					<Route path="/" exact>
 						<User />
@@ -21,8 +23,8 @@ const App = () => {
 					</Route>
 					<Redirect to="/" />
 				</Switch>
-			</Router>
-		</>
+			</main>
+		</Router>
 	);
 };
 
