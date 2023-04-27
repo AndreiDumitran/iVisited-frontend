@@ -1,43 +1,42 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './Button.css';
 
-const Button = props => {
-  if (props.href) {
-    return (
-      <a
-        className={`button button--${props.size || 'default'} ${props.inverse &&
-          'button--inverse'} ${props.danger && 'button--danger'}`}
-        href={props.href}
-      >
-        {props.children}
-      </a>
-    );
-  }
-  if (props.to) {
-    return (
-      <Link
-        to={props.to}
-        exact={props.exact}
-        className={`button button--${props.size || 'default'} ${props.inverse &&
-          'button--inverse'} ${props.danger && 'button--danger'}`}
-      >
-        {props.children}
-      </Link>
-    );
-  }
-  return (
-    <button
-      className={`button button--${props.size || 'default'} ${props.inverse &&
-        'button--inverse'} ${props.danger && 'button--danger'}`}
-      type={props.type}
-      onClick={props.onClick}
-      disabled={props.disabled}
-    >
-      {props.children}
-    </button>
-  );
+const Button = (prop) => {
+	if (prop.href) {
+		return (
+			<a
+				className={`button button--${prop.size || 'default'} ${prop.inverse && 'button--inverse'
+					} ${prop.danger && 'button--danger'}`}
+				href={prop.href}
+			>
+				{prop.children}
+			</a>
+		);
+	}
+	if (prop.to) {
+		return (
+			<Link
+				to={prop.to}
+				exact={prop.exact}
+				className={`button button--${prop.size || 'default'} ${prop.inverse && 'button--inverse'
+					} ${prop.danger && 'button--danger'}`}
+			>
+				{prop.children}
+			</Link>
+		);
+	}
+	return (
+		<button
+			className={`button button--${prop.size || 'default'} ${prop.inverse && 'button--inverse'
+				} ${prop.danger && 'button--danger'}`}
+			type={prop.type}
+			onClick={prop.onClick}
+			disabled={prop.disabled}
+		>
+			{prop.children}
+		</button>
+	);
 };
 
 export default Button;
